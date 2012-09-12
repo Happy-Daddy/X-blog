@@ -1,9 +1,9 @@
-﻿.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } .clearfix { display: inline-table; } /* Hides from IE-mac \*/ * html .clearfix { height: 1%; } .clearfix { display: block; } /* End hide from IE-mac */
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } .clearfix { display: inline-table; } /* Hides from IE-mac \*/ * html .clearfix { height: 1%; } .clearfix { display: block; } /* End hide from IE-mac */
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, form,fieldset,input,textarea,p,blockquote,th,td { padding: 0; margin: 0; } table { border-collapse: collapse; border-spacing: 0; } fieldset,img { border: 0; } address,caption,cite,code,dfn,em,strong,th,var { font-weight: normal; font-style: normal; } ol,ul { list-style: none; } caption,th { text-align: left; }
 h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size: 100%; } q:before,q:after { content:''; } abbr,acronym { border: 0; }
 a{text-decoration:none;}
-.fontyh, .sider-bar-content h3{ font-family:"Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;}
+body,.fontyh, .sider-bar-content h3, h3.article-brow, .article-container h2,.article-container .article-footer{ font-family:"Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;}
 /*===================================================*/    
 
 .body-bg{background:#f0eeef url(images/body_bg.gif); text-align:center;}
@@ -12,20 +12,85 @@ a{text-decoration:none;}
 .nav-container{width:980px; margin:0 auto; height:61px; background:#fafafa url(images/header_shadow_sides.gif) repeat-x; text-align:left;}
 .nav ul{ padding-top:10px;}
 .nav ul li{ display:inline;}
-.nav ul li a{font:normal normal 14px "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti; color:#303030; padding-left:25px;}
+.nav ul li a{font:normal normal 14px "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti; color:#616161; padding-left:25px;}
 .nav ul li a:hover{color:#1086b6;}
 .logo{background:url(images/top_shadow_right.gif) no-repeat; height:61px; width:35px;}
 .logo img{ padding:7px 0 0 5px;}
-.wrraper{width:1080px; margin:0 auto; height:400px; text-align:left;}
+.wrraper{width:1080px; margin:0 auto;text-align:left;}
 
-.article-container{width:715px; background:#fff url(images/content_shadow_left.gif) repeat-y;  margin-left:46px; float:left; *width:717px; *margin-left:23px;}
+ 
+.article-list, .article-detail, .comment-container{width:715px; background:#fff url(images/content_shadow_left.gif) repeat-y;  margin-left:46px; float:left; *width:717px; *margin-left:23px; position:relative;}
 .logo, .nav, login-bar{float:left; height:61px;}
 .nav{background:#fafafa url(images/header_shadow_center.gif) repeat-x; width:671px;}
-.article-container .content{background:#fff url(images/content_shadow_right.gif) right repeat-y; margin-left:5px; height:300px;}
+.article-list .content,.article-detail .content ,.comment-container .content{background:#fff url(images/content_shadow_right.gif) right repeat-y; margin-left:5px; padding:0 25px 10px 20px;}
 .bottom-shadow{ height:9px; background:url(images/content_bottom.gif) 0 -9px repeat-x; overflow:hidden;}
 .bottom-shadow-left, .bottom-shadow-right{height:9px; background:url(images/content_bottom.gif) 0 -9px repeat-x;}
 .bottom-shadow-left{ width:7px;   background-position:0 0; float:left; background-repeat:no-repeat;}
 .bottom-shadow-right{ width:8px;  background-position:-7px 0; float:right; background-repeat:no-repeat;}
+
+/*========关于文章的样式=============*/
+/*一篇文章的容器*/
+.article-container{ padding-bottom:20px; background:url(images/article_split.gif) 0 bottom no-repeat; margin-bottom:25px; overflow:hidden;}
+.article-detail .article-container{background:none;}
+/*文章的标题*/
+.article-container h2, .article-container h2 a{ font-size:20px; color:#212121; padding:15px 0;}
+.article-detail .article-container h2,.article-detail .article-container h2 a{padding-bottom:5px;}
+/*文章的内容*/
+.article-container .article-content{font-size:14px; color:#4c4d4d;}
+/*文章的图片*/
+.article-container .article-content img{ max-width:670px; padding:5px 0; }
+/*文章的底部信息*/
+.article-container .article-footer{ padding:10px 0 20px 0; font-size:12px; color:#888;}
+/*文章的时间、分类脚注*/
+.article-container .article-footnote-time{float:left; color:#858585;}
+/*文章的阅读、评论参数等等*/
+.article-container .article-statistics span{color:#888;}
+.article-container .article-statistics{float:right; color:#21a6c3;}
+/*文章的阅读、评论参数图标*/
+.article-container .article-statistics span{ font-size:12px; line-height:14px;}
+/*图标系列*/
+.article-icon{ width:14px; height:12px; background:url(images/icons.gif); display:inline-block; margin-left:5px; margin-right:2px;}
+.article-icon-like{}
+.article-icon-comment{ background-position:-14px 0;}
+.article-icon-click{ background-position:-30px 0;}
+/*阅读全文链接*/
+.article-container .article-readall{ color:#888; padding-left:10px;}
+
+/*文章之间的分割线*/
+.article-dividing-line{}
+/*文章的题头 页眉*/
+h3.article-brow{ color:#21a6c3; border-bottom:solid #21a6c3 1px;}
+/*文章详细页面 标题下方的文章信息*/
+.article-info{ font-size:12px; color:#888; padding-bottom:20px;}
+
+/*----------------------文章内容的样式------------------------------------*/
+.article-container .article-content p{line-height:24px;}
+.article-container .article-content p.indentation{ text-indent:28px;}
+
+/*-----------------------文章详细页面---------------------------------------*/
+.detail-page{height:30px; position:absolute; bottom:0;bottom:8px;width: 706px;left: 4px;}
+.detail-page a.detail-page-previous,.detail-page a.detail-page-next{ background:#21a6c3 url(images/page_button.gif) 0 -186px; width:45px; height:33px; display:block; float:left;}
+.detail-page a.detail-page-next{ background-position:0 -220px; width:83px; float:right;}
+.detail-page a.detail-page-previous:hover{ background-position:-45px -186px;}
+.detail-page a.detail-page-next:hover{ background-position:0 -255px;}
+
+/*-----------评论相关--------------*/
+.comment-container{margin-top:10px;};
+
+/*-------------页码--------------------------*/
+.page{ height:40px; width:706px; margin-left:50px; padding:1px; background:url(images/page_button.gif) 0 -142px repeat-x; margin-top:10px; position:relative; text-align:center;}
+.arrow-btn{position:absolute; width:55px; height:35px; background:#21a6c3 url(images/page_button.gif);}
+.arrow-btn-left{left:0;}
+.arrow-btn-right{right:0; background-position:-55px 0;}
+a.arrow-btn-left:hover{background-position:0 -36px;}
+a.arrow-btn-right:hover{background-position:-55px -36px;}
+.arrow-btn-left-disabled{background-position:0 -72px;}
+.arrow-btn-right-disabled{background-position:-55px -72px;}
+.page-number{ margin:0 auto; padding-top:5px;}
+.page-number li{display:inline;}
+.page-number li a{ background:#e3e3e3 url(images/page_button.gif) -30px -108px no-repeat; width:26px; height:26px; display:inline-block; font-size:12px; color:#464747; line-height:26px;}
+.page-number li a:hover,.page-number li a.current{background:#21a6c3 url(images/page_button.gif) 0 -108px no-repeat; color:#fff;}
+
 
 /*=====================侧边栏======================*/
 .sider-bar{float:right; width:250px; margin-right:55px; margin-top:10px; background:url(images/sidebar_bg.gif) repeat-y; *margin-right:27px;}
@@ -40,5 +105,26 @@ a{text-decoration:none;}
 
 .sider-bar-content h3{background:#20a8c2;  padding:10px 15px; color:#fff; font-size:14px;}
 .sider-bar-content .sider-bar-top-h3{ padding-top:5px;}
+.sider-bar-content h3 a{text-indent:130px; display:inline-block; color:#fff; font-size:12px;}
 
-/*=======change========testttttttit!===*/
+.recommend-list{padding:10px;}
+.recommend-list li a{font-size:12px; line-height:25px; color:#616161;}
+.album-list li{ border-bottom:dashed #616161 1px;}
+
+.sider-bar-content h3.random-excellent{color:#21a6c3; background:#f9f8f8; padding:5px 10px;}
+.random-excellent-container{background:#e5e5e5; padding:15px;}
+.random-excellent-container img{float:left;}
+.random-excellent-container p{color:#616161; float:right; font-size:12px; width:75px; height:146px; overflow:hidden; line-height:18px;}
+.random-excellent-container p b{ display:block; padding-bottom:5px;}
+
+.lovethis{ height:55px; text-align:center; padding-top:10px;}
+.lovethis a{ height:44px; width:44px; background:url(images/love.gif); display:inline-block;}
+.lovethis a:hover{ background-position:0 -44px;}
+
+/*======页脚=====*/
+.footer{ text-align:center; clear:both; padding:10px;}
+.footer p{ color:#888; font-size:12px;}
+.footer p span{ color:#4cb7cf;}
+.footer ul{ padding:8px; padding-top:40px;}
+.footer ul li{ display:inline;}
+.footer ul li a, .footer ul li span{color:#21A6C3; font-size:12px;}
