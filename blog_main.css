@@ -75,7 +75,7 @@ h3.article-brow{ color:#21a6c3; border-bottom:solid #21a6c3 1px;}
 .detail-page a.detail-page-next:hover{ background-position:0 -255px;}
 
 /*-----------评论相关--------------*/
-.comment-container{margin-top:10px;};
+.comment-container{margin-top:10px;}
 
 /*-------------页码--------------------------*/
 .page{ height:40px; width:706px; margin-left:50px; padding:1px; background:url(images/page_button.gif) 0 -142px repeat-x; margin-top:10px; position:relative; text-align:center;}
