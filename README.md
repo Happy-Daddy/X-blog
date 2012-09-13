@@ -1,4 +1,4 @@
 X-blog
 ======
 
-my blog
+This is a little blog.
