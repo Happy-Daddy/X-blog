@@ -3,7 +3,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, form,fieldset,input,textarea,p,blockquote,th,td { padding: 0; margin: 0; } table { border-collapse: collapse; border-spacing: 0; } fieldset,img { border: 0; } address,caption,cite,code,dfn,em,strong,th,var { font-weight: normal; font-style: normal; } ol,ul { list-style: none; } caption,th { text-align: left; }
 h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size: 100%; } q:before,q:after { content:''; } abbr,acronym { border: 0; }
 a{text-decoration:none;}
-body,.fontyh, .sider-bar-content h3, h3.article-brow, .article-container h2,.article-container .article-footer{ font-family:"Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;}
+body,.fontyh, .sider-bar-content h3, h3.article-brow, .article-container h2,.article-container .article-footer{ font-family:"Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti; font-size:12px;}
 /*===================================================*/    
 
 .body-bg{background:#f0eeef url(images/body_bg.gif); text-align:center;}
@@ -77,13 +77,22 @@ h3.article-brow{ color:#21a6c3; border-bottom:solid #21a6c3 1px;}
 /*-----------评论相关--------------*/
 .comment-container{margin-top:10px; position:relative;}
 .comment-corner{width:41px; height:41px; background:url(images/comment_btn.gif); top:0; left:4px; position:absolute;}
-.comment-container .content{margin:0 auto; margin:40px 20px; height:200px; background:#fff; padding:20px;}
-.comment-container .write-comment textarea{width:625px;height: 60px;padding: 5px;}
-.comment-container .write-comment a{width:70px; height:37px; text-align:center; color:#fff; line-height:37px; background:#21a6c3 url(images/comment_btn.gif) -70px -66px no-repeat; display:block; float:right; margin-top:10px;}
+.comment-container .content .comment-content{margin:0 auto;  background:#fff; padding:20px; padding-top:40px;}
+.comment-container .write-comment textarea{width:610px;height: 60px;padding: 5px;}
+.comment-container .write-comment a{width:70px; height:37px; text-align:center; color:#fff; line-height:37px; background:#21a6c3 url(images/comment_btn.gif) -70px -66px no-repeat; display:block; float:right; margin-top:10px; font-size:16px;}
 .comment-container .write-comment a:hover{background:#5cbed3 url(images/comment_btn.gif) 0 -66px no-repeat; }
-comment-container .comment-list ul{}
-comment-container .comment-list ul li a{}
-/*-------------页码--------------------------*/
+.comment-container .comment-list ul{}
+.comment-container .comment-list ul li{position:relative; padding:10px 0; border-bottom:dashed #CCC 1px;}
+.comment-container .comment-list ul li a.user-img{ position:absolute;}
+.comment-container .comment-list ul li div.comment-detail{padding-left:60px; color:#666; font-size:12px;}
+.comment-container .comment-list ul li div.comment-detail a{color:#21A6C3;}
+.comment-container .comment-list ul li div.comment-detail p{padding:5px 0;}
+.comment-container .comment-list ul li div.comment-detail div span{color:#999; padding-right:10px;}
+
+.comment-page{padding-top:20px; text-align:right; }
+.comment-page a{width:47px; height:25px; background:#aaa url(images/comment_btn.gif) -47px -41px; color:#333; text-align:center; line-height:25px; margin-left:10px; display:inline-block; }
+.comment-page a:hover{background-position:0 -41px; color:#777;}
+/*-----------------页码----------------------*/
 .page{ height:40px; width:706px; margin-left:50px; padding:1px; background:url(images/page_button.gif) 0 -142px repeat-x; margin-top:10px; position:relative; text-align:center;}
 .arrow-btn{position:absolute; width:55px; height:35px; background:#21a6c3 url(images/page_button.gif);}
 .arrow-btn-left{left:0;}
